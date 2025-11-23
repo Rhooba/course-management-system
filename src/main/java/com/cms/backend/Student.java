@@ -1,11 +1,13 @@
+package com.cms.backend;
+
 import java.util.*;
 
 public class Student extends User {
     private List<Grade> grades = new ArrayList<>();
     private double average;
 
-    public Student(String username, String name, String email, int PhoneNumber) {
-        super(username, name, email, PhoneNumber);
+    public Student(String username, String name, String email, int phoneNumber) {
+        super(username, name, email, phoneNumber);
     }
 
     public void viewGrade() {

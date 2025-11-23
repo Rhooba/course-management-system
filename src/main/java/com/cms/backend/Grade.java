@@ -1,3 +1,5 @@
+package com.cms.backend;
+
 public class Grade {
     private String assignmentName;
     private double score;

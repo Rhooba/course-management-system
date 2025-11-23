@@ -1,14 +1,16 @@
+package com.cms.backend;
+
 public class User {
     protected String username;
     protected String name;
     protected String email;
-    protected int PhoneNumber;
+    protected int phoneNumber;
 
-    public User(String username, String name, String email, int PhoneNumber) {
+    public User(String username, String name, String email, int phoneNumber) {
         this.username = username;
         this.name = name;
         this.email = email;
-        this.PhoneNumber = PhoneNumber;
+        this.phoneNumber = phoneNumber;
     }
 
     public void enterUsername(String username) {
@@ -23,8 +25,8 @@ public class User {
         this.email = email;
     }
 
-    public void enterPhoneNumber(int PhoneNumber) {
-        this.PhoneNumber = PhoneNumber;
+    public void enterPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getUsername() {
@@ -39,8 +41,8 @@ public class User {
         return email;
     }
 
-    public int PhoneNumber() {
-        return PhoneNumber;
+    public int getPhoneNumber() {
+        return phoneNumber;
     }
 
 }

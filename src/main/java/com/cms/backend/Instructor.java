@@ -1,11 +1,13 @@
+package com.cms.backend;
+
 import java.util.*;
 
-public class Professor extends User {
+public class Instructor extends User {
     private List<Assignment> assignments = new ArrayList<>();
     private List<Course> courses = new ArrayList<>();
 
-    public Professor(String username, String name, String email, int PhoneNumber) {
-        super(username, name, email, PhoneNumber);
+    public Instructor(String username, String name, String email, int phoneNumber) {
+        super(username, name, email, phoneNumber);
     }
 
     public void viewGrade(Student student) {

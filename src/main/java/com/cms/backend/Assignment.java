@@ -1,3 +1,5 @@
+package com.cms.backend;
+
 public class Assignment {
     private String title;
     private double maxPoints;
