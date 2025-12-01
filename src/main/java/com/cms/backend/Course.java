@@ -1,6 +1,7 @@
 package com.cms.backend;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
     private String courseName;
@@ -25,6 +26,16 @@ public class Course {
     public void displayRoster() {
         for (Student s: students) {
             System.out.println(s.getName() + " - " + s.getEmail());
+        }
+    }
+
+    public void displayCourse() {
+        System.out.println("Course: " + courseName + " (" + courseNumber + ")");
+        System.out.println("Instructor: " + instructor);
+        System.out.println("Enrolled students: " + students.size());
+        if (!students.isEmpty()) {
+            System.out.println("Roster:");
+            displayRoster();
         }
     }
 }
