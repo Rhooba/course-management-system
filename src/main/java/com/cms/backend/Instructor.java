@@ -1,11 +1,9 @@
-<<<<<<< Updated upstream:src/main/java/com/cms/backend/Instructor.java
 package com.cms.backend;
 
 import java.util.*;
-=======
 import java.util.ArrayList;
 import java.util.List;
->>>>>>> Stashed changes:src/main/java/com/cms/backend/Professor.java
+
 
 public class Instructor extends User {
     private List<Assignment> assignments = new ArrayList<>();
@@ -36,7 +34,7 @@ public class Instructor extends User {
     }
 
     public String getInfo() {
-        return String.format("Professor: %s (%s) | Email: %s | Phone: %d | Courses: %d | Assignments: %d",
-                name, username, email, PhoneNumber, courses.size(), assignments.size());
+        return String.format("Instructor: %s (%s) | Email: %s | Phone: %d | Courses: %d | Assignments: %d",
+                name, username, email, phoneNumber, courses.size(), assignments.size());
     }
 }

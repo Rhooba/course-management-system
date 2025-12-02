@@ -1,8 +1,6 @@
-//<<<<<<< Updated upstream
 package com.cms.backend;
 
 import java.util.*;
-//=======
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -10,7 +8,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-//>>>>>>> Stashed changes
 
 public class Student extends User {
     private List<Grade> grades = new ArrayList<>();
@@ -28,9 +25,9 @@ public class Student extends User {
         String filename = String.format("grades_%s.txt", username);
         File file = new File(filename);
         try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
-            pw.println("Grades for: " + name + " (" + username + ")");
-            pw.println("Email: " + email + " | Phone: " + PhoneNumber);
-            pw.println();
+            // pw.println("Grades for: " + name + " (" + username + ")");
+            // pw.println("Email: " + email + " | Phone: " + phoneNumber);
+            // pw.println();
             if (grades.isEmpty()) {
                 pw.println("No grades available.");
             }   else {
@@ -74,7 +71,7 @@ public class Student extends User {
         double avg = calculateAverage();
         String letter = getLetterGrade();
         return String.format("Student: %s (%s) | Email: %s | Phone: %d | Average: %.2f%% (%s)",
-                name, username, email, PhoneNumber, avg, letter);
+                name, username, email, phoneNumber, avg, letter);
     }
 
     
