@@ -1,8 +1,4 @@
-//<<<<<<< Updated upstream
 package com.cms.backend;
-
-import java.util.*;
-//=======
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -10,10 +6,13 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-//>>>>>>> Stashed changes
+
+
+
 
 public class Student extends User {
     private List<Grade> grades = new ArrayList<>();
+    private List<Course> courses = new ArrayList<>();
     private double average;
 
     public Student(String username, String name, String email, int phoneNumber) {
@@ -29,8 +28,12 @@ public class Student extends User {
         File file = new File(filename);
         try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
             pw.println("Grades for: " + name + " (" + username + ")");
-            pw.println("Email: " + email + " | Phone: " + PhoneNumber);
+            pw.println("Email: " + email + " | Phone: " + phoneNumber);
             pw.println();
+
+            // pw.println("Grades for: " + name + " (" + username + ")");
+            // pw.println("Email: " + email + " | Phone: " + phoneNumber);
+            // pw.println();
             if (grades.isEmpty()) {
                 pw.println("No grades available.");
             }   else {
@@ -74,8 +77,31 @@ public class Student extends User {
         double avg = calculateAverage();
         String letter = getLetterGrade();
         return String.format("Student: %s (%s) | Email: %s | Phone: %d | Average: %.2f%% (%s)",
-                name, username, email, PhoneNumber, avg, letter);
+                name, username, email, phoneNumber, avg, letter);
     }
 
-    
+    public void displayName() {
+        System.out.println("Name: " + name);
+    }
+
+    public void displayAverageGrade() {
+        double avg = calculateAverage();
+        String letter = getLetterGrade();
+        System.out.println(String.format("Average Grade: %.2f%% (%s)", avg, letter));
+    }
+
+    public void addCourse(Course course) {
+        courses.add(course);
+    }
+
+    public void displayCourse() {
+        if (courses.isEmpty()) {
+            System.out.println("No courses enrolled.");
+        } else {
+            System.out.println("Enrolled Courses:");
+            for (Course c : courses) {
+                System.out.println("  - " + c.getCourseName());
+            }
+        }
+    }
 }

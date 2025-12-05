@@ -38,4 +38,20 @@ public class Course {
             displayRoster();
         }
     }
+
+    public void courseDisplay() {
+        System.out.println(String.format("Course: %s (Number: %d)", courseName, courseNumber));
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public int getCourseNumber() {
+        return courseNumber;
+    }
+
+    public String getInstructor() {
+        return instructor;
+    }
 }
