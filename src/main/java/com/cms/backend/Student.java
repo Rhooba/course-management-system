@@ -1,4 +1,5 @@
 package com.cms.backend;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -6,8 +7,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-
-
 
 
 public class Student extends User {
@@ -27,10 +26,10 @@ public class Student extends User {
         String filename = String.format("grades_%s.txt", username);
         File file = new File(filename);
         try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)))) {
+
             pw.println("Grades for: " + name + " (" + username + ")");
             pw.println("Email: " + email + " | Phone: " + phoneNumber);
             pw.println();
-
             // pw.println("Grades for: " + name + " (" + username + ")");
             // pw.println("Email: " + email + " | Phone: " + phoneNumber);
             // pw.println();

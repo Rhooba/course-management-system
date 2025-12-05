@@ -1,4 +1,6 @@
 package com.cms.backend;
+
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,5 +41,5 @@ public class Instructor extends User {
     public void displayInstructor() {
         System.out.println("Instructor: " + name);
     }
+}
 
-    }
